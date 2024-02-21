@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centered and Responsive Page</title>
+    <style>
+      body {
+        margin: auto;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px;
+      }
+
+      img {
+        transform: scale(3);
+        height: 12em;
+        width: 12em;
+        margin: 0 auto 10px;
+        display: block;
+      }
+
+      .event-text {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      form {
+        text-align: left;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #fff;
+        color: #000;
+        cursor: pointer;
+        padding: 10px; /* Adjusted padding to make the button smaller */
+        border: none;
+        border-radius: 5px;
+        border: 1px solid black;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #181717;
+        color: white;
+        border: 1px solid white;
+      }
+
+      .disclaimer {
+        font-size: 12px;
+        font-style: italic;
+        color: #999;
+        margin-top: 10px;
+      }
+
+      .cookie-notice {
+        font-size: 12px;
+        color: #ccc;
+        margin-top: 20px;
+      }
+      #img_party {
+        margin-top: 20em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <img src="logo_.png" alt="Logo Image" />
+      <div class="event-text">Sunday 25.02 • Fashion Show • HBtoo 2Floor</div>
+      <form action="javascript:this.send_reservation()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" />
+
+        <label for="mobile">N. Cellulare:</label>
+        <input type="tel" id="mobile" name="mobile" />
+
+        <label for="invitedBy">Chi ti ha invitato:</label>
+        <input type="text" id="invitedBy" name="invitedBy" />
+
+        <input type="submit" value="Submit" />
+      </form>
+      <div class="disclaimer">
+        *L’organizzazione si riserva il diritto di ammissione
+      </div>
+      <div class="cookie-notice">
+        This website uses cookies.
+        <a href="cookie-policy.html">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="container" id="img_party" style="display: none">
+      <h5>Ti aspettiamo all'evento</h5>
+      <img src="celebrate.svg" alt="Celebrate" />
+    </div>
+  </body>
+
+  <script>
+    function send_reservation() {
+      console.log("Hello");
+      console.log(document.getElementById("container"));
+      document.getElementById("container").style = "display:none";
+      document.getElementById("img_party").style.display = "block";
+    }
+  </script>
+</html>
