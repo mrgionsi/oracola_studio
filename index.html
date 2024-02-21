@@ -1,132 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Centered and Responsive Page</title>
-    <style>
-      body {
-        margin: auto;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #000;
-        color: #fff;
-      }
 
-      .container {
-        max-width: 600px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 20px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ORACOLA STUDIO 25.2</title>
+  <style>
+    fieldset{
+      border:none;
+    }
+    body {
+      margin: auto;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
 
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 20px;
+    }
+
+    img {
+      transform: scale(2);
+      height: 8em;
+      width: 8em;
+      margin: 0 auto 20px; /* Increased margin to create space */
+      display: block;
+    }
+
+    .event-text {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    form {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #fff;
+      color: #000;
+      cursor: pointer;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      border: 1px solid black;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #181717;
+      color: white;
+      border: 1px solid white;
+    }
+
+    .disclaimer {
+      font-size: 12px;
+      font-style: italic;
+      color: #999;
+      margin-top: 10px;
+    }
+
+    .cookie-notice {
+      font-size: 12px;
+      color: #ccc;
+      margin-top: 20px;
+    }
+
+    #img_party {
+      margin-top: 20em;
+    }
+.btn.btn-primary{
+  width: 50%;
+}
+    @media (max-width: 768px) {
       img {
-        transform: scale(3);
-        height: 12em;
-        width: 12em;
-        margin: 0 auto 10px;
-        display: block;
-      }
-
-      .event-text {
-        font-size: 18px;
-        margin-bottom: 10px;
-      }
-
-      form {
-        text-align: left;
-      }
-
-      label {
-        display: block;
-        margin-bottom: 8px;
+        transform: scale(2);
       }
 
       input {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 16px;
-        box-sizing: border-box;
+        width: 90%;
       }
-
-      input[type="submit"] {
-        background-color: #fff;
-        color: #000;
-        cursor: pointer;
-        padding: 10px; /* Adjusted padding to make the button smaller */
-        border: none;
-        border-radius: 5px;
-        border: 1px solid black;
-      }
-
-      input[type="submit"]:hover {
-        background-color: #181717;
-        color: white;
-        border: 1px solid white;
-      }
-
-      .disclaimer {
-        font-size: 12px;
-        font-style: italic;
-        color: #999;
-        margin-top: 10px;
-      }
-
-      .cookie-notice {
-        font-size: 12px;
-        color: #ccc;
-        margin-top: 20px;
-      }
-      #img_party {
-        margin-top: 20em;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container" id="container">
-      <img src="logo_.png" alt="Logo Image" />
-      <div class="event-text">Sunday 25.02 • Fashion Show • HBtoo 2Floor</div>
-      <form action="javascript:this.send_reservation()">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" />
-
-        <label for="surname">Surname:</label>
-        <input type="text" id="surname" name="surname" />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" />
-
-        <label for="birthday">Birthday:</label>
-        <input type="date" id="birthday" name="birthday" />
-
-        <label for="mobile">N. Cellulare:</label>
-        <input type="tel" id="mobile" name="mobile" />
-
-        <label for="invitedBy">Chi ti ha invitato:</label>
-        <input type="text" id="invitedBy" name="invitedBy" />
-
-        <input type="submit" value="Submit" />
-      </form>
-      <div class="disclaimer">
-        *L’organizzazione si riserva il diritto di ammissione
-      </div>
-      <div class="cookie-notice">
-        This website uses cookies.
-        <a href="cookie-policy.html">Cookie Policy</a>
-      </div>
-    </div>
-    <div class="container" id="img_party" style="display: none">
-      <h5>Ti aspettiamo all'evento</h5>
-      <img src="celebrate.svg" alt="Celebrate" />
-    </div>
-  </body>
-
-  <script>
-    function send_reservation() {
-      console.log("Hello");
-      console.log(document.getElementById("container"));
-      document.getElementById("container").style = "display:none";
-      document.getElementById("img_party").style.display = "block";
     }
-  </script>
+  </style>
+</head>
+
+<body>
+  <div class="container" id="container">
+    <img src="logo_.png" alt="Logo Image" />
+    <div class="event-text">Sunday 25.02 • Fashion Show • HBtoo 2Floor</div>
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSeDAdXuTZggvqFZlrx8cuitU1aS4bVnyCmY-StkcxsCG5YheA/formResponse"
+      target="_self" id="bootstrapForm" method="POST">
+
+      <!-- Field type: "short" id: "824942029" -->
+      <fieldset>
+        <label for="name">Nome:</label>
+        <div class="form-group">
+          <input id="2143128960" type="text" name="entry.2143128960" class="form-control" required>
+        </div>
+      </fieldset>
+
+      <!-- Field type: "short" id: "1650406335" -->
+      <fieldset>
+        <label for="surname">Cognome:</label>
+        <div class="form-group">
+          <input id="1481923677" type="text" name="entry.1481923677" class="form-control" required>
+        </div>
+      </fieldset>
+
+      <!-- Field type: "short" id: "518746497" -->
+      <fieldset>
+        <label for="email">Email:</label>
+        <div class="form-group">
+          <input id="253717821" type="text" name="entry.253717821" class="form-control" required>
+        </div>
+      </fieldset>
+
+      <!-- Field type: "date" id: "1815139945" -->
+      <fieldset>
+        <label for="birthday">Data di nascita:</label>
+        <div class="form-group">
+          <input type="date" id="1026279487_date" placeholder="2/21/2024" class="form-control" required>
+        </div>
+      </fieldset>
+
+      <!-- Field type: "short" id: "481176748" -->
+      <fieldset>
+        <label for="mobile">Numero di cellulare (+39):</label>
+        <div class="form-group">
+          <input id="187355580" type="text" name="entry.187355580" class="form-control" required>
+        </div>
+      </fieldset>
+
+      <!-- Field type: "short" id: "1831928698" -->
+      <fieldset>
+        <label for="invitedBy">Chi ti ha invitato:</label>
+        <div class="form-group">
+          <input id="2005084120" type="text" name="entry.2005084120" class="form-control" required>
+        </div>
+      </fieldset>
+
+      <!-- Field type: "short" id: "803853963" -->
+      <fieldset>
+        <label for="numPeople">Numero di persone:</label>
+        <div class="form-group">
+          <input id="1092725265" type="text" name="entry.1092725265" class="form-control" required>
+        </div>
+      </fieldset>
+
+      <input type="hidden" name="fvv" value="1">
+      <input type="hidden" name="fbzx" value="-5448816148896049109">
+      <input type="hidden" name="pageHistory" value="0">
+
+      <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+    <div class="disclaimer">
+      *L’organizzazione si riserva il diritto di ammissione
+    </div>
+    <div class="cookie-notice">
+      This website uses cookies.
+      <a href="cookie-policy.html">Cookie Policy</a>
+    </div>
+  </div>
+  <div class="container" id="img_party" style="display: none">
+    <h5>Ti aspettiamo all'evento</h5>
+    <img src="celebrate.svg" alt="Celebrate" />
+  </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+
+<script>
+  $('#bootstrapForm').submit(function (event) {
+    event.preventDefault()
+    var extraData = {}
+    {
+      // Parsing input date id=1026279487
+      var dateField = $("#1026279487_date").val()
+      var timeField = $("#1026279487_time").val()
+      let d = new Date(dateField)
+      if (!isNaN(d.getTime())) {
+        extraData["entry.1026279487_year"] = d.getFullYear()
+        extraData["entry.1026279487_month"] = d.getMonth() + 1
+        extraData["entry.1026279487_day"] = d.getUTCDate()
+      }
+      if (timeField && timeField.split(':').length >= 2) {
+        let values = timeField.split(':')
+        extraData["entry.1026279487_hour"] = values[0]
+        extraData["entry.1026279487_minute"] = values[1]
+      }
+    }
+    $('#bootstrapForm').ajaxSubmit({
+      data: extraData,
+      dataType: 'jsonp',
+      error: function () {
+        alert('Form Submitted. Thanks.')
+      }
+    })
+  })
+</script>
+
 </html>
