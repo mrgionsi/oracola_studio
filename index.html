@@ -105,72 +105,68 @@
   <div class="container" id="container">
     <img src="logo_.png" alt="Logo Image" />
     <div class="event-text">Sunday 25.02 • Fashion Show • HBtoo 2Floor</div>
-    <form
-      action="https://docs.google.com/forms/d/e/1FAIpQLSeDAdXuTZggvqFZlrx8cuitU1aS4bVnyCmY-StkcxsCG5YheA/formResponse"
-      target="_self" id="bootstrapForm" method="POST">
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdAP5VeK7GD-E2gnUeXPrIo0UkPImqQpOqeaZFdFaAhr6Ni0A/formResponse"
+    target="_self"
+    id="bootstrapForm"
+    method="POST">
 
-      <!-- Field type: "short" id: "824942029" -->
-      <fieldset>
-        <label for="name">Nome:</label>
-        <div class="form-group">
-          <input id="2143128960" type="text" name="entry.2143128960" class="form-control" required>
-        </div>
-      </fieldset>
 
-      <!-- Field type: "short" id: "1650406335" -->
-      <fieldset>
-        <label for="surname">Cognome:</label>
-        <div class="form-group">
-          <input id="1481923677" type="text" name="entry.1481923677" class="form-control" required>
-        </div>
-      </fieldset>
+  <!-- Field type: "short" id: "1457571300" -->
+  <fieldset>
+      <legend for="1457571300">Nome</legend>
+      <div class="form-group">
+          <input id="60114377" type="text" name="entry.60114377" class="form-control" >
+      </div>
+  </fieldset>
 
-      <!-- Field type: "short" id: "518746497" -->
-      <fieldset>
-        <label for="email">Email:</label>
-        <div class="form-group">
-          <input id="253717821" type="text" name="entry.253717821" class="form-control" required>
-        </div>
-      </fieldset>
 
-      <!-- Field type: "date" id: "1815139945" -->
-      <fieldset>
-        <label for="birthday">Data di nascita:</label>
-        <div class="form-group">
-          <input type="date" id="1026279487_date" placeholder="2/21/2024" class="form-control" required>
-        </div>
-      </fieldset>
+  <!-- Field type: "short" id: "494343086" -->
+  <fieldset>
+      <legend for="494343086">Cognome</legend>
+      <div class="form-group">
+          <input id="1735135506" type="text" name="entry.1735135506" class="form-control" >
+      </div>
+  </fieldset>
 
-      <!-- Field type: "short" id: "481176748" -->
-      <fieldset>
-        <label for="mobile">Numero di cellulare (+39):</label>
-        <div class="form-group">
-          <input id="187355580" type="text" name="entry.187355580" class="form-control" required>
-        </div>
-      </fieldset>
 
-      <!-- Field type: "short" id: "1831928698" -->
-      <fieldset>
-        <label for="invitedBy">Chi ti ha invitato:</label>
-        <div class="form-group">
-          <input id="2005084120" type="text" name="entry.2005084120" class="form-control" required>
-        </div>
-      </fieldset>
+  <!-- Field type: "short" id: "23703624" -->
+  <fieldset>
+      <legend for="23703624">Email</legend>
+      <div class="form-group">
+          <input id="731332321" type="text" name="entry.731332321" class="form-control" >
+      </div>
+  </fieldset>
 
-      <!-- Field type: "short" id: "803853963" -->
-      <fieldset>
-        <label for="numPeople">Numero di persone:</label>
-        <div class="form-group">
-          <input id="1092725265" type="text" name="entry.1092725265" class="form-control" required>
-        </div>
-      </fieldset>
 
-      <input type="hidden" name="fvv" value="1">
-      <input type="hidden" name="fbzx" value="-5448816148896049109">
-      <input type="hidden" name="pageHistory" value="0">
+  <!-- Field type: "short" id: "755291300" -->
+  <fieldset>
+      <legend for="755291300">Numero di cellulare (+39)</legend>
+      <div class="form-group">
+          <input id="916162257" type="text" name="entry.916162257" class="form-control" >
+      </div>
+  </fieldset>
 
-      <input class="btn btn-primary" type="submit" value="Submit">
-    </form>
+
+  <!-- Field type: "short" id: "59398458" -->
+  <fieldset>
+      <legend for="59398458">Chi ti invita</legend>
+      <div class="form-group">
+          <input id="1147435727" type="text" name="entry.1147435727" class="form-control" >
+      </div>
+  </fieldset>
+
+  <input type="hidden" name="fvv" value="1">
+  <input type="hidden" name="fbzx" value="8710890937407563198">
+  <!--
+      CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+      This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+      Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+      We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+  -->
+  <input type="hidden" name="pageHistory" value="0">
+
+  <input class="btn btn-primary" type="submit" value="Submit">
+</form>
     <div class="disclaimer">
       *L’organizzazione si riserva il diritto di ammissione
     </div>
@@ -189,33 +185,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
 
 <script>
-  $('#bootstrapForm').submit(function (event) {
+$('#bootstrapForm').submit(function (event) {
     event.preventDefault()
     var extraData = {}
-    {
-      // Parsing input date id=1026279487
-      var dateField = $("#1026279487_date").val()
-      var timeField = $("#1026279487_time").val()
-      let d = new Date(dateField)
-      if (!isNaN(d.getTime())) {
-        extraData["entry.1026279487_year"] = d.getFullYear()
-        extraData["entry.1026279487_month"] = d.getMonth() + 1
-        extraData["entry.1026279487_day"] = d.getUTCDate()
-      }
-      if (timeField && timeField.split(':').length >= 2) {
-        let values = timeField.split(':')
-        extraData["entry.1026279487_hour"] = values[0]
-        extraData["entry.1026279487_minute"] = values[1]
-      }
-    }
     $('#bootstrapForm').ajaxSubmit({
-      data: extraData,
-      dataType: 'jsonp',
-      error: function () {
-        alert('Form Submitted. Thanks.')
-      }
+        data: extraData,
+        dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+        error: function () {
+            // Submit of form should be successful but JSONP callback will fail because Google Forms
+            // does not support it, so this is handled as a failure.
+            alert('Richiesta inviata. Grazie.')
+            // You can also redirect the user to a custom thank-you page:
+            // window.location = 'http://www.mydomain.com/thankyoupage.html'
+        }
     })
-  })
+})
 </script>
 
 </html>
